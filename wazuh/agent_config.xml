@@ -1,0 +1,14 @@
+<ossec_config>
+  <client>
+    <server>
+      <address>192.168.56.10</address>
+      <port>1514</port>
+      <protocol>tcp</protocol>
+    </server>
+  </client>
+
+  <syscheck>
+    <frequency>43200</frequency>
+    <directories check_all="yes">C:\Users\Public\DData</directories>
+  </syscheck>
+</ossec_config>
