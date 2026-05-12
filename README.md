@@ -1,6 +1,5 @@
 # 🚨 Ransomware Resilience Lab: SIEM-Driven Detection & API Availability Evaluation
 
-<<<<<<< HEAD
 ![Cybersecurity](https://img.shields.io/badge/Domain-Cybersecurity-red?style=for-the-badge)
 ![SIEM](https://img.shields.io/badge/SIEM-Wazuh-blue?style=for-the-badge)
 ![API](https://img.shields.io/badge/API-FastAPI-green?style=for-the-badge)
@@ -8,78 +7,54 @@
 ![Status](https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-This project presents a cyber resilience evaluation framework that simulates ransomware-like activity within an isolated virtual lab and evaluates detection capability using Wazuh SIEM, system availability using automated API smoke testing, and organisational resilience through measurable performance metrics.
+This project presents a cyber resilience evaluation framework that simulates ransomware-like activity within an isolated virtual lab and evaluates:
+
+* Detection capability using SIEM (Wazuh)
+* System availability using automated API smoke testing
+* Organisational resilience through measurable performance metrics
 
 Unlike traditional security projects focused purely on detection, this work evaluates a more important operational question:
 
 > **Can critical services remain operational during an attack?**
 
-## 🎯 Objectives
+# 🧠 This is NOT a normal project
 
-- Simulate ransomware-like behaviour in a controlled, ethical environment
-- Monitor and detect anomalies using Wazuh SIEM
-- Evaluate service availability through API health monitoring
-- Measure MTTD (Mean Time to Detect) and MTTR (Mean Time to Respond)
-- Connect technical findings to cyber resilience strategy and business continuity
-- Align recommendations with recognised frameworks such as NIST CSF and ISO/IEC 27001
+This is a controlled cyber battlefield.
 
-## 🏗️ System Architecture
+You do not just detect attacks here —
+you evaluate whether systems can continue functioning during disruption.
+
+
+# 🔥 What This Project Demonstrates
+
+* Simulated ransomware activity inside a controlled environment
+* Real-time SIEM monitoring and alerting
+* API availability validation during attack conditions
+* Automated smoke testing for operational continuity
+
+> ⚡ Core Question:
+> **“When systems are under attack, what still works?”**
+
+
+# 🎯 Objectives
+
+* Simulate ransomware-like behaviour in a controlled, ethical environment
+* Monitor and detect anomalies using Wazuh SIEM
+* Evaluate service availability through API health monitoring
+* Measure MTTD (Mean Time to Detect) and MTTR (Mean Time to Respond)
+* Connect technical findings to cyber resilience strategy and business continuity
+* Align recommendations with recognised frameworks such as NIST CSF and ISO/IEC 27001
+
+
+# 🏗️ System Architecture
 
 ```text
-=======
-## 📌 Project Overview
-
-This project presents a cyber resilience evaluation framework that simulates ransomware-like activity within an isolated virtual lab and evaluates:
-
-Detection capability using SIEM (Wazuh)
-System availability using automated API smoke testing
-Organisational resilience through measurable performance metrics
-
-Unlike traditional security projects focused purely on detection, this work evaluates:
-
-“Can critical services remain operational during an attack?”
-
-## 🧠 This is NOT a normal project.
-
-This is a **controlled cyber battlefield**.
-
-You don’t just detect attacks here —
-you **watch systems survive them**.
-
-## 🔥 What You’re About to See
-
-* A simulated ransomware attack spreading inside a network
-* A SIEM trying to detect it in real-time
-* A service fighting to stay alive under pressure
-* Automated tests checking if the system is still operational
-
-> ⚡ Question this project answers:
-> **“When everything is breaking… what still works?”**
-
-## 🎯 Mission
-
-Build a system that answers:
-
-> **Detection ≠ Resilience**
-
-So we measure:
-
-* Can you detect it? ✔️
-* Can you respond? ✔️
-* But more importantly…
-* 👉 **Can your system still function?**
-
-## 🏗️ System Architecture
-
-```id="6ojv8c"
->>>>>>> 6fe1009b6c741a828a95d11b65fd4aaad6a189ee
 Host Machine (Windows 11)
 │
 ├── Kali Linux (Attacker)
 │        │
-<<<<<<< HEAD
 │        └── Simulated attack activity
 │
 ├── Windows 10 (Victim)
@@ -93,156 +68,9 @@ Host Machine (Windows 11)
                   └── Smoke testing automation
 ```
 
-## ⚙️ Technology Stack
 
-| Layer | Technology |
-|------|-----------|
-| SIEM | Wazuh |
-| API | FastAPI |
-| Automation | Python |
-| Monitoring | File Integrity Monitoring (FIM) |
-| Virtualisation | VirtualBox |
-| Reporting | JSON + HTML |
+# ⚙️ Technology Stack
 
-## 🔬 Core Components
-
-### 1. Safe Ransomware Simulation
-- Simulates rapid file creation and modification activity
-- Mimics ransomware indicators without using destructive malware
-- Generates observable behaviour for SIEM monitoring and response testing
-
-### 2. SIEM Monitoring (Wazuh)
-- Real-time log analysis
-- File Integrity Monitoring (FIM)
-- Alert generation based on suspicious file activity
-
-### 3. API Availability Monitoring
-`GET /status`
-
-- Tracks service uptime
-- Measures response latency during simulated attack activity
-- Demonstrates whether a critical service remains available during disruption
-
-### 4. Automated Smoke Testing
-- OpenAPI-based endpoint validation
-- Repeated health checks against the API
-- Report outputs in JSONL and HTML formats
-
-## 📈 Evaluation Metrics
-
-| Metric | Description |
-|------|------------|
-| MTTD | Time taken to detect suspicious activity |
-| MTTR | Time taken to respond and stabilise |
-| API Availability | Service uptime during the attack window |
-| Alert Accuracy | Ratio of useful alerts to noise / false positives |
-| Latency | Performance degradation during the event |
-
-## 🚀 Quick Start
-
-### 1. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Start the API
-```bash
-uvicorn api.app:app --host 0.0.0.0 --port 8000
-```
-
-### 3. Run the safe simulation
-```bash
-python simulation/ransomware_simulator.py
-```
-
-### 4. Run smoke tests
-```bash
-python automation/smoke_test.py
-```
-
-### 5. Review reports
-- `automation/results.jsonl`
-- `automation/report.html`
-
-## 📁 Repository Structure
-
-```text
-ransomware-resilience-lab/
-│
-├── api/                         # FastAPI service under test
-├── automation/                  # Smoke testing and report generation
-├── simulation/                  # Safe ransomware-style activity generator
-├── wazuh/                       # Wazuh setup and sample configuration
-├── docs/                        # Report-ready academic documentation
-├── .github/workflows/           # Optional CI workflow
-├── README.md
-├── requirements.txt
-└── LICENSE
-```
-
-## 📚 Documentation
-
-The `docs/` folder contains distinction-oriented write-ups you can adapt into your final report:
-- `methodology.md`
-- `architecture.md`
-- `evaluation.md`
-- `report_content.md`
-- `presentation_notes.md`
-
-## 📸 Evidence to Add
-
-Place your real screenshots in `docs/screenshots/` and reference them in your report and README:
-- `wazuh-alerts.png`
-- `fim-events.png`
-- `api-status.png`
-- `smoke-test-report.png`
-
-## 🧠 Key Contribution
-
-This project demonstrates that detection alone is not a sufficient measure of cyber security effectiveness. A more mature resilience model evaluates whether essential services can remain available, whether monitoring can surface meaningful indicators quickly, and whether the organisation can respond in a structured and measurable way.
-
-## 🛡️ Ethical Design
-
-- Fully isolated lab environment
-- No real malware used
-- No destructive encryption
-- No impact on external systems or networks
-- Designed for research, portfolio, and educational use only
-
-## 🔮 Future Work
-
-- AI-based anomaly detection
-- SOAR integration for automated response
-- Cloud-based SIEM deployment
-- Larger endpoint datasets and richer telemetry
-- Comparative testing across multiple SIEM platforms
-
-## 👨‍💻 Author
-
-**Mihir Raut**  
-MSc Cyber Security Management  
-Ravensbourne University London
-
-## ⭐ Final Insight
-
-> **A secure system detects attacks. A resilient system survives them.**
-=======
-│        └── Simulated Attack
-│
-├── Windows 10 (Victim)
-│        │
-│        └── Logs + File Changes
-│
-└── Ubuntu Server
-         ├── Wazuh SIEM (Detection + FIM)
-         └── FastAPI Service (/status endpoint)
-                  │
-                  └── Smoke Testing Automation
-```
-
-## 🧱 Lab Setup (Realistic Environment)
-
-⚙️ Technology Stack
 | Layer          | Technology                      |
 | -------------- | ------------------------------- |
 | SIEM           | Wazuh                           |
@@ -252,151 +80,157 @@ Ravensbourne University London
 | Virtualisation | VirtualBox                      |
 | Reporting      | JSON + HTML                     |
 
-```id="6ojv8c"
-[ Kali Linux ]  --->  [ Windows 10 Victim ]  --->  [ Ubuntu SIEM + API ]
-     Attack               Target Machine            Detection + Monitoring
-```
+# 🔬 Core Components
 
-* 🔴 Kali = attacker mindset
-* 🟡 Windows = real endpoint behaviour
-* 🟢 Ubuntu = brain of the system (SIEM + API)
+## 🧪 1. Safe Ransomware Simulation
 
-## ⚙️ Stack That Powers This
+* Simulates rapid file creation and modification activity
+* Mimics ransomware indicators without destructive malware
+* Generates observable behaviour for SIEM monitoring and response testing
 
-* 🧠 Wazuh (SIEM + Detection Engine)
-* ⚡ FastAPI (Service under attack)
-* 🤖 Python (Automation + Simulation)
-* 🔍 FIM (File Integrity Monitoring)
-* 📊 JSON + HTML (Evidence + Reports)
+## 📡 2. SIEM Monitoring (Wazuh)
 
-## 💥 Core Modules
-
-### 🧪 1. Controlled Ransomware Simulation
-
-* No real damage (safe)
-* Mimics:
-
-  * File modifications
-  * High-frequency writes
-  * Suspicious patterns
-
-### 📡 2. SIEM Detection Engine
-
-* Real-time monitoring
+* Real-time log analysis
 * File Integrity Monitoring (FIM)
-* Alert generation
+* Alert generation based on suspicious activity
 
-### 🌐 3. Service Under Pressure
+## 🌐 3. API Availability Monitoring
 
-```id="ylk2y6"
+```bash
 GET /status
 ```
 
-Simple endpoint.
-But during attack → **this becomes everything.**
+* Tracks service uptime
+* Measures response latency during simulated attack activity
+* Demonstrates whether a critical service remains operational during disruption
 
-### 🤖 4. Smoke Testing System
 
-* Automatically tests API health
-* Outputs:
+## 🤖 4. Automated Smoke Testing
+
+* OpenAPI-based endpoint validation
+* Repeated health checks against the API
+* Generates:
 
   * `results.jsonl`
   * `report.html`
 
+---
 
-## 📊 What You Measure (This is the gold)
+# 📊 Evaluation Metrics
 
-| Metric          | Meaning               |
-| --------------- | --------------------- |
-| ⏱️ MTTD         | How fast you detect   |
-| ⚡ MTTR          | How fast you respond  |
-| 🌐 Availability | Is system still alive |
-| 🎯 Accuracy     | Real alerts vs noise  |
+| Metric           | Description                              |
+| ---------------- | ---------------------------------------- |
+| MTTD             | Time taken to detect suspicious activity |
+| MTTR             | Time taken to respond and stabilise      |
+| API Availability | Service uptime during attack activity    |
+| Alert Accuracy   | Useful alerts vs false positives         |
+| Latency          | Performance degradation during the event |
 
+---
 
-## 🚀 Run The Chaos
+# 🚀 Quick Start
 
-### Start API
+## 1. Install dependencies
 
-```bash id="5f1yiq"
-cd api
-uvicorn app:app --host 0.0.0.0 --port 8000
+```bash
+pip install -r requirements.txt
 ```
 
-### API Availability Monitoring
-```id="6ojv8c"
-GET /status
+## 2. Start the API
+
+```bash
+uvicorn api.app:app --host 0.0.0.0 --port 8000
 ```
 
-### Trigger Attack
+## 3. Run the simulation
 
-```bash id="9jfc8r"
-cd simulation
-python ransomware_simulator.py
+```bash
+python simulation/ransomware_simulator.py
 ```
 
-### Test Survival
+## 4. Execute smoke tests
 
-```bash id="6wdvlg"
-cd automation
-python smoke_test.py
+```bash
+python automation/smoke_test.py
 ```
 
-### Watch SIEM
+# 📁 Repository Structure
 
-* Open Wazuh dashboard
-* Observe alerts in real time
+```text
+ransomware-resilience-lab/
+│
+├── api/                         # FastAPI service under test
+├── automation/                  # Smoke testing and reporting
+├── simulation/                  # Safe ransomware activity simulation
+├── wazuh/                       # Wazuh setup and configuration
+├── docs/                        # Academic and project documentation
+├── .github/workflows/           # CI workflow
+├── README.md
+├── requirements.txt
+└── LICENSE
+```
 
-## 📸 Proof Section
+# 📚 Documentation
 
-* Wazuh alerts screenshot
-* FIM logs
-* API running during attack
-* Smoke test report
+The `docs/` directory contains distinction-oriented academic content:
 
+* `methodology.md`
+* `architecture.md`
+* `evaluation.md`
+* `report_content.md`
+* `presentation_notes.md`
 
-## 🧠 What This Project REALLY Shows
+# 📸 Evidence to Add
 
-This is not about tools.
+Add your screenshots inside:
 
-This shows:
+```text
+docs/screenshots/
+```
 
-* You understand **real attack behaviour**
-* You can build **defensive systems**
-* You think in terms of **business continuity**
-* You measure **what actually matters**
+Recommended screenshots:
 
-## 🛡️ Ethics (Important)
+* `wazuh-alerts.png`
+* `fim-events.png`
+* `api-status.png`
+* `smoke-test-report.png`
 
-* Fully isolated lab
-* No real malware
-* No external impact
+# 🧠 Key Contribution
 
+This project demonstrates that detection alone is not a sufficient measure of cybersecurity effectiveness.
 
-## 👨‍💻 Built By
+A mature resilience strategy must evaluate:
+
+* operational continuity
+* service availability
+* detection capability
+* response effectiveness
+
+during active cyber incidents.
+
+# 🛡️ Ethical Design
+
+* Fully isolated lab environment
+* No real malware used
+* No destructive encryption
+* No impact on external systems
+* Educational and research purposes only
+
+# 🔮 Future Work
+
+* AI-based anomaly detection
+* SOAR integration
+* Cloud-based SIEM deployment
+* Richer telemetry datasets
+* Comparative SIEM evaluation
+
+# 👨‍💻 Author
 
 **Mihir Raut**
-Cybersecurity Engineer in the making at 
+MSc Cyber Security Management
 Ravensbourne University London
 
+# ⭐ Final Insight
 
-## ⚡ Final Thought
-
-Most projects ask:
-
-> “Can you detect the attack?”
-
-This one asks:
-
-> **“Can your system survive it?”**
-
-## 🧠 If You're Reviewing This
-
-You’re not just looking at a project.
-
-You’re looking at:
-
-* A **mini SOC lab**
-* A **resilience testing framework**
-* A **future security engineer mindset**
->>>>>>> 6fe1009b6c741a828a95d11b65fd4aaad6a189ee
+> **A secure system detects attacks.
+> A resilient system survives them.**
